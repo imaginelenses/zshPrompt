@@ -4,7 +4,8 @@
   "description": "Minimalist Zsh prompt configuration tool with visualization and GUI element addition.",
   "main": "public/app.js",
   "scripts": {
-    "start": "npx serve public"
+    "start": "npx serve public",
+    "build": "cp -r public dist"
   },
   "author": "",
   "license": "MIT",
