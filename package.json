@@ -1,0 +1,12 @@
+{
+  "name": "zsh-prompt-configurator",
+  "version": "1.0.0",
+  "description": "Minimalist Zsh prompt configuration tool with visualization and GUI element addition.",
+  "main": "public/app.js",
+  "scripts": {
+    "start": "npx serve public"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {}
+}

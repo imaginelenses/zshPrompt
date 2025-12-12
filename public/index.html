@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zsh Prompt Configurator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="mb-4 text-center">Zsh Prompt Configurator</h1>
+    <div class="mb-3">
+      <label for="promptInput" class="form-label">Paste or type your <code>$PROMPT</code> string:</label>
+      <textarea class="form-control" id="promptInput" rows="2" placeholder="%n@%m: %~%#">%F{#13a10e}%n%f%F{#13a10e}@%f%F{#13a10e}%m%f:%F{#3b78ff}%~%f$ </textarea>
+    </div>
+    <div class="mb-3">
+      <button class="btn btn-primary w-100" id="visualizeBtn">Visualize Prompt</button>
+    </div>
+    <div class="mb-4">
+      <label class="form-label">Add element to prompt:</label>
+      <div class="input-group mb-2">
+        <select class="form-select" id="elementSelect">
+          <option value="%n">Username (%n)</option>
+          <option value="%m">Host short (%m)</option>
+          <option value="%M">Host full (%M)</option>
+          <option value="%~">Current Dir (%~)</option>
+          <option value="%1~">Current Dir (1~)</option>
+          <option value="%d">Current Dir (%d)</option>
+          <option value="%/">Current Dir (%/)</option>
+          <option value="%#">Prompt Char (%#)</option>
+          <option value="%T">Time 24h (%T)</option>
+          <option value="%@">Time 12h (%@)</option>
+          <option value="%D">Date (%D)</option>
+          <option value=":">Colon (:)</option>
+          <option value="@">At (@)</option>
+          <option value="$">Dollar ($)</option>
+        </select>
+        <button class="btn btn-outline-secondary" id="addElementBtn">Add</button>
+      </div>
+      <div class="input-group">
+        <input type="text" class="form-control" id="customElementInput" placeholder="Custom string or character">
+        <button class="btn btn-outline-secondary" id="addCustomElementBtn">Add Custom</button>
+      </div>
+    </div>
+    <div class="mb-4">
+      <label class="form-label">Prompt Elements:</label>
+      <div id="promptBlocks" class="d-flex flex-wrap gap-2 mb-3"></div>
+    </div>
+    <div class="mb-4">
+      <label class="form-label">Prompt Preview:</label>
+      <div id="promptPreview" class="border rounded p-3 bg-light text-monospace"></div>
+    </div>
+    <div class="mb-4 text-end">
+      <button class="btn btn-outline-success" id="copyPromptBtn">Copy Final Prompt</button>
+    </div>
+  </div>
+  
+  <footer class="mx-3 py-5 d-flex flex-column align-items-center justify-content-center">
+    <div class="d-flex flex-wrap justify-content-center alert alert-primary rounded shadow-lg" role="alert">
+      <a class="github-button" href="https://github.com/imaginelenses/zshprompt" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="small" data-show-count="true" aria-label="Star imaginelenses/zshprompt on GitHub">Star</a>
+      <span style="margin-top: -1px;">
+        &nbsp; <a class="link-dark" href="https://github.com/imaginelenses/zshprompt"><strong>Star Zsh Prompt on GitHub!</strong></a>   
+      </span>
+    </div>
+    <span>
+      &copy; 2026 by <a class="link-dark" href="https://imaginelenses.com">Imaginelenses</a>
+    </span>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- GitHub Buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
